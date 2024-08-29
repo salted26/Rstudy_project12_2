@@ -12,7 +12,7 @@ import MoviePage from "./pages/Movies/MoviePage";
 function App() {
   return (
     <div className="App">
-      <navbar></navbar>
+      {/*<navbar></navbar>*/}
       <Routes>
           <Route index element={<HomePage />} />
           <Route path="movies">
