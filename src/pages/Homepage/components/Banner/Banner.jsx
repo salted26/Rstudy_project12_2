@@ -9,16 +9,25 @@ const Banner = () => {
 
     console.log("data", data)
 
-    const imageUrl = `https://image.tmdb.org/t/p/w533_and_h300_bestv2${data?.results[0].poster_path}`;
+    const image = `https://image.tmdb.org/t/p/w533_and_h300_bestv2${data?.results[0].poster_path}`;
+    const url = "url(" + image + ")";
 
     if (isLoading) {
-        <h5>Loading...</h5>
+        return (
+            <div>
+                <h5>Loading...</h5>
+            </div>
+        )
     }
     if (isError) {
-        <Alert varian="danger">{error.message}</Alert>
+        return (
+            <div>
+                <Alert varian="danger">{error.message}</Alert>
+            </div>
+        )
     }
     return (
-        <div className="banner-container" style={{backgroundImage:"url(" + `${imageUrl}` + ")"}} >
+        <div className="banner-container" style={{backgroundImage:url}} >
             <div className="title-container">
                 <h1>{data?.results[0].title}</h1>
                 <p>{data?.results[0].overview}</p>
