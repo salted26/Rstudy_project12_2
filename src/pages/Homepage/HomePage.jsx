@@ -1,13 +1,15 @@
 import React from 'react';
 import './Homepage.style.css'
-import {Link} from "react-router-dom";
+import Banner from "./components/Banner/Banner";
 
+// 1. 배너
+// 2. popular movie
+// 3. top rated movie
+// 4. upcoming movie
 const HomePage = () => {
     return (
         <div>
-            <h3>Home Page</h3>
-            <p><Link to="/movies">MoviePage</Link></p>
-            <p><Link to="/movies/:id">MovieDetail</Link></p>
+            <Banner />
         </div>
     );
 };

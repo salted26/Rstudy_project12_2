@@ -4,10 +4,9 @@ const API_KEY =  process.env.REACT_APP_API_KEY;
 
 const api = axios.create({
     baseURL: 'https://api.themoviedb.org/3',
-    timeout:1000,
     headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${API_KEY}`
+        Authorization : `Bearer ${API_KEY}`,
+        accept: 'application/json'
     }
 })
 
@@ -30,5 +29,6 @@ axios.interceptors.response.use(function (response) {
     // 응답 오류가 있는 작업 수행
     return Promise.reject(error);
 });
+
 
 export default api;
