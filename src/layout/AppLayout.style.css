@@ -1,0 +1,10 @@
+.nav-link {
+    color: white !important;
+}
+
+.brand {
+    font-size: 3rem;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    color: rgb(100%, 0%, 0%) !important;
+}

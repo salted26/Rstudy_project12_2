@@ -1,0 +1,29 @@
+.banner-container {
+    min-height: 56vh;
+    min-width: 100vw;
+    background-size: cover;
+    background-position: left;
+}
+
+.banner-container::before {
+    content:'';
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    left: 0;
+    height: 56vh;
+    width: 100%;
+}
+
+.title-container {
+    height: 56vh;
+    width: 40%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 2rem;
+}
